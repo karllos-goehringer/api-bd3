@@ -1,4 +1,4 @@
-import { CursoModel, ICurso } from './curso.model';
+import { CursoModel, type ICurso } from './curso.model.ts';
 
 export class CursoRepository {
   async create(data: Partial<ICurso>): Promise<ICurso> {

@@ -1,6 +1,6 @@
-import MatriculaRepository from './matricula.repository';
-import { CreateMatriculaDto, UpdateMatriculaDto, GetMatriculaDto } from './matricula.dto';
-import { IMatricula } from './matricula.model';
+import MatriculaRepository from './matricula.repository.ts';
+import type { CreateMatriculaDto, UpdateMatriculaDto, GetMatriculaDto } from './matricula.dto.ts';
+import type { IMatricula } from './matricula.model.ts';
 
 export class MatriculaService {
     private repository: MatriculaRepository;

@@ -25,4 +25,4 @@ type GetCursoDto = {
     alunos: string[];
 }
 
-export { CreateCursoDto, UpdateCursoDto, GetCursoDto };
+export type { CreateCursoDto, UpdateCursoDto, GetCursoDto };

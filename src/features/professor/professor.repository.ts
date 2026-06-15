@@ -1,4 +1,4 @@
-import {ProfessorModel, IProfessor } from "./professor.model";
+import { ProfessorModel, type IProfessor } from './professor.model.ts';
 export class ProfessorRepository {
     async create(data: Partial<IProfessor>): Promise<IProfessor> {
         return await ProfessorModel.create(data);

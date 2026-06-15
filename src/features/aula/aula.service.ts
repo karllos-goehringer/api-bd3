@@ -1,6 +1,6 @@
-import {AulaRepository} from './aula.repository';
-import { CreateAulaDto, UpdateAulaDto, GetAulaDto } from './aula.dto';
-import { IAula } from './aula.model';
+import {AulaRepository} from './aula.repository.ts';
+import type { CreateAulaDto, UpdateAulaDto, GetAulaDto } from './aula.dto.ts';
+import type { IAula } from './aula.model.ts';
 
 export class AulaService {
     private aulaRepository: AulaRepository;

@@ -1,6 +1,6 @@
-import {AvaliacaoRepository} from './avaliacoes.repository';
-import { CreateAvaliacaoDto, UpdateAvaliacaoDto, GetAvaliacaoDto } from './avaliacoes.dto';
-import { IAvaliacao } from './avaliacoes.model';
+import {AvaliacaoRepository} from './avaliacoes.repository.ts';
+import type { CreateAvaliacaoDto, UpdateAvaliacaoDto, GetAvaliacaoDto } from './avaliacoes.dto.ts';
+import type { IAvaliacao } from './avaliacoes.model.ts';
 
 export class AvaliacaoService {
     private repository: AvaliacaoRepository;

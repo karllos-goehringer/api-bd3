@@ -1,4 +1,4 @@
-import AvaliacaoModel, { IAvaliacao } from './avaliacoes.model';
+import AvaliacaoModel, { type IAvaliacao } from './avaliacoes.model.ts';
 
 export class AvaliacaoRepository {
     async create(data: Partial<IAvaliacao>): Promise<IAvaliacao> {

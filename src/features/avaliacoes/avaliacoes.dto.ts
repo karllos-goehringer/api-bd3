@@ -21,4 +21,4 @@ type CreateAvaliacaoDto = {
 }
 type UpdateAvaliacaoDto = Partial<CreateAvaliacaoDto>;
 
-export { GetAvaliacaoDto, CreateAvaliacaoDto, UpdateAvaliacaoDto };
+export type { GetAvaliacaoDto, CreateAvaliacaoDto, UpdateAvaliacaoDto };

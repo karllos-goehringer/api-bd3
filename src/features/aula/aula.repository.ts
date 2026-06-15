@@ -1,4 +1,4 @@
-import {AulaModel, IAula} from './aula.model';
+import { AulaModel, type IAula } from './aula.model.ts';
 
 export class AulaRepository {
     async create(data: Partial<IAula>): Promise<IAula> {

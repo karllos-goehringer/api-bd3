@@ -1,6 +1,6 @@
-import moongoose from 'mongoose';
-export interface IAula extends moongoose.Document {
-    _id: moongoose.Types.ObjectId;
+import mongoose from 'mongoose';
+export interface IAula extends mongoose.Document {
+    _id: mongoose.Types.ObjectId;
     titulo: string;
     descricao: string;
     videoUrl: string;
@@ -8,11 +8,11 @@ export interface IAula extends moongoose.Document {
     ordem: number;
     gratuito: boolean;
     criadoEm: Date;
-    curso: moongoose.Types.ObjectId;
+    curso: mongoose.Types.ObjectId;
     ativo: boolean;
 }
-const AulaSchema = new moongoose.Schema({
-    _id: { type: moongoose.Schema.Types.ObjectId, auto: true },
+const AulaSchema = new mongoose.Schema({
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
     titulo: { type: String, required: true },
     descricao: { type: String, required: true },
     videoUrl: { type: String, required: true },
@@ -20,10 +20,10 @@ const AulaSchema = new moongoose.Schema({
     ordem: { type: Number, required: true },
     gratuito: { type: Boolean, required: true },
     criadoEm: { type: Date, default: Date.now },
-    curso: { type: moongoose.Schema.Types.ObjectId, ref: 'Curso', required: true },
+    curso: { type: mongoose.Schema.Types.ObjectId, ref: 'Curso', required: true },
     ativo: { type: Boolean, default: true },
 }, { versionKey: false });
 
-export const AulaModel = moongoose.model<IAula>('Aula', AulaSchema);
+export const AulaModel = mongoose.model<IAula>('Aula', AulaSchema);
 
 export default AulaModel;

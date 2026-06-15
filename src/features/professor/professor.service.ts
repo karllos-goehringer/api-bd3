@@ -1,6 +1,6 @@
-import ProfessorRepository from "./professor.repository";
-import { CreateProfessorDto, UpdateProfessorDto, GetProfessorDto } from "./professor.dto";
-import { IProfessor } from "./professor.model";
+import ProfessorRepository from "./professor.repository.ts";
+import type { CreateProfessorDto, UpdateProfessorDto, GetProfessorDto } from "./professor.dto.ts";
+import type { IProfessor } from "./professor.model.ts";
 
 export class ProfessorService {
     private repository: ProfessorRepository;

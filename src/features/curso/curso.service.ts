@@ -1,6 +1,6 @@
-import { CursoRepository } from './curso.repository';
-import { CreateCursoDto, UpdateCursoDto, GetCursoDto } from './curso.dto';
-import { ICurso } from './curso.model';
+import { CursoRepository } from './curso.repository.ts';
+import type { CreateCursoDto, UpdateCursoDto, GetCursoDto } from './curso.dto.ts';
+import type { ICurso } from './curso.model.ts';
 
 export class CursoService {
   private repository: CursoRepository;

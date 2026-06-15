@@ -1,6 +1,6 @@
-import AlunoRepository from './aluno.repository';
-import {  getAlunoDto, CreateAlunoDto, UpdateAlunoDto } from './aluno.dto';
-import { IAluno } from './aluno.model';
+import AlunoRepository from './aluno.repository.ts';
+import type { getAlunoDto, CreateAlunoDto, UpdateAlunoDto } from './aluno.dto.ts';
+import type { IAluno } from './aluno.model.ts';
 export class AlunoService {
     private repository: AlunoRepository;
     constructor() {

@@ -15,4 +15,4 @@ type CreateAlunoDto = {
 
 type UpdateAlunoDto = Partial<CreateAlunoDto>;
 
-export { getAlunoDto, CreateAlunoDto, UpdateAlunoDto };
+export type { getAlunoDto, CreateAlunoDto, UpdateAlunoDto };

@@ -1,4 +1,4 @@
-import {AlunoModel, IAluno} from './aluno.model';
+import { AlunoModel, type IAluno } from './aluno.model.ts';
 export class AlunoRepository {
     async create(data: Partial<IAluno>): Promise<IAluno> {
         return await AlunoModel.create(data);

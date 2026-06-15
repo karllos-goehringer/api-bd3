@@ -1,7 +1,7 @@
-import moongose from 'mongoose';
+import mongoose from 'mongoose';
 
-export interface IAvaliacao extends moongose.Document {
-    _id: moongose.Types.ObjectId;
+export interface IAvaliacao extends mongoose.Document {
+    _id: mongoose.Types.ObjectId;
     aluno: string;
     curso: string;
     notaMaxima: number;
@@ -11,8 +11,8 @@ export interface IAvaliacao extends moongose.Document {
     atualizadoEm: Date;
     ativo: boolean;
 }
-const AvaliacaoSchema = new moongose.Schema({
-    _id: { type: moongose.Schema.Types.ObjectId, auto: true },
+const AvaliacaoSchema = new mongoose.Schema({
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
     aluno: { type: String, required: true },
     curso: { type: String, required: true },
     nota: { type: Number, required: true },
@@ -20,6 +20,6 @@ const AvaliacaoSchema = new moongose.Schema({
     ativo: { type: Boolean, default: true },
 }, { timestamps: { createdAt: 'criadoEm', updatedAt: 'atualizadoEm' }, versionKey: false });
 
-export const AvaliacaoModel = moongose.model<IAvaliacao>('Avaliacao', AvaliacaoSchema);
+export const AvaliacaoModel = mongoose.model<IAvaliacao>('Avaliacao', AvaliacaoSchema);
 
 export default AvaliacaoModel; 

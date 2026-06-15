@@ -16,4 +16,4 @@ type GetProfessorDto = {
     ativo: boolean;
 }
 
-export { CreateProfessorDto, UpdateProfessorDto, GetProfessorDto };
+export type { CreateProfessorDto, UpdateProfessorDto, GetProfessorDto };

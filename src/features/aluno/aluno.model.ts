@@ -1,7 +1,7 @@
-import moongose from 'mongoose';
+import mongoose from 'mongoose';
 
-export interface IAluno extends moongose.Document {
-    _id: moongose.Types.ObjectId;
+export interface IAluno extends mongoose.Document {
+    _id: mongoose.Types.ObjectId;
     nome: string;
     email: string;
     senha: string;
@@ -13,8 +13,8 @@ export interface IAluno extends moongose.Document {
     ativo: boolean;
 }
 
-const AlunoSchema = new moongose.Schema({
-    _id: { type: moongose.Schema.Types.ObjectId, auto: true },
+const AlunoSchema = new mongoose.Schema({
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
     nome: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     senha: { type: String, required: true },
@@ -24,6 +24,6 @@ const AlunoSchema = new moongose.Schema({
     ativo: { type: Boolean, default: true },
 }, { timestamps: { createdAt: 'criadoEm', updatedAt: 'atualizadoEm' }, versionKey: false });
 
-export const AlunoModel = moongose.model<IAluno>('Aluno', AlunoSchema);
+export const AlunoModel = mongoose.model<IAluno>('Aluno', AlunoSchema);
 
 export default AlunoModel;

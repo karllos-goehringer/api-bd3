@@ -16,4 +16,4 @@ type GetMatriculaDto = {
     aulasAssistidas: string[];
 }
 
-export { CreateMatriculaDto, UpdateMatriculaDto, GetMatriculaDto };
+export type { CreateMatriculaDto, UpdateMatriculaDto, GetMatriculaDto };

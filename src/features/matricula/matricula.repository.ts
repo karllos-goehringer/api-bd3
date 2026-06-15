@@ -1,4 +1,4 @@
-import {MatriculaModel, IMatricula} from './matricula.model';
+import { MatriculaModel, type IMatricula } from './matricula.model.ts';
 export class MatriculaRepository {
     async create(data: Partial<IMatricula>): Promise<IMatricula> {
         return await MatriculaModel.create(data);
